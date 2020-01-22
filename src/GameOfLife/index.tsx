@@ -70,7 +70,9 @@ const GameOfLife: React.FC = () => {
             clearInterval(interval);
         }
         return () => {
-            interval && clearInterval(interval)
+            if (interval) {
+                clearInterval(interval)
+            }
         }
     });
 
